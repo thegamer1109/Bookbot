@@ -11,6 +11,14 @@ def count_characters(text):
             dict[char] = 1
     return dict
 
+def print_report(text):
+    alphabet = [chr(i) for i in range(97, 123)]
+    print(count_words(text), " words found in the document")
+    for char, count in count_characters(text).items():
+        if char in alphabet:
+            print(f"The '{char}' character was fount {count} times")
+    print("--- End Report ---")
+
 if __name__ == "__main__":
 
     try:
@@ -20,5 +28,5 @@ if __name__ == "__main__":
         print("The file was not found.")
         exit(1)
         
-    print(count_characters(text))
+    print(print_report(text))
     
