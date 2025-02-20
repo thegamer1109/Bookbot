@@ -16,7 +16,7 @@ def print_report(text):
     print(count_words(text), " words found in the document")
     for char, count in count_characters(text).items():
         if char in alphabet:
-            print(f"The '{char}' character was fount {count} times")
+            print(f"The '{char}' character was found {count} times")
     print("--- End Report ---")
 
 if __name__ == "__main__":
