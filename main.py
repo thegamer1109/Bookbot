@@ -9,12 +9,13 @@ def count_characters(text):
             dict[char] += 1
         else: 
             dict[char] = 1
+    return dict
 
 if __name__ == "__main__":
 
     try:
         with open("books/frankenstein.txt", 'r') as file:
-            text = file.read()
+            text = file.read().lower()
     except FileNotFoundError:
         print("The file was not found.")
         exit(1)
